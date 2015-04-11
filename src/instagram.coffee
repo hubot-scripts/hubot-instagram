@@ -15,8 +15,6 @@
 #
 # Author:
 #   raysrashmi
-#
-
 
 Instagram = require('instagram-node-lib')
 
@@ -29,7 +27,7 @@ module.exports = (robot) ->
       tag =  text[0]
       count = parseInt(text[1]) if text[1]
     else
-      msg.send 'Please provied tag'
+      msg.send 'Please provide tag.'
       return
     Instagram.tags.recent 
       name: tag
@@ -51,7 +49,3 @@ authenticateUser = (msg) ->
     return
   Instagram.set('client_id', config.client_key)
   Instagram.set('client_secret', config.client_secret)
-
-          
-
-
